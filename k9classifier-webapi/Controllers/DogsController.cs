@@ -1,4 +1,5 @@
-﻿using k9classifier_webapi.Repositories;
+﻿using k9classifier_webapi.Entities;
+using k9classifier_webapi.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -16,8 +17,9 @@ public class DogController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<string> GetDogNames()
+    public IEnumerable<Dog> GetDogs()
     {
-        return _repository.GetDogNames();
+        var dogs = _repository.GetAllDogs();
+        return dogs;
     }
 }
