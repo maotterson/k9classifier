@@ -22,4 +22,11 @@ public class DogController : ControllerBase
         var dogs = await _repository.GetAllDogsAsync();
         return dogs;
     }
+
+    [HttpPost]
+    public async Task<ActionResult<Dog>> CreateAsync(Dog dog)
+    {
+        await _repository.AddDogAsync(dog);
+        return CreatedAtAction(nameof(GetDogsAsync), new { id = dog.Id }, dog);
+    }
 }
