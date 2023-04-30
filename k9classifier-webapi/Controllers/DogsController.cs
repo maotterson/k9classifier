@@ -17,9 +17,9 @@ public class DogController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<Dog> GetDogs()
+    public async Task<IEnumerable<Dog>> GetDogsAsync()
     {
-        var dogs = _repository.GetAllDogs();
+        var dogs = await _repository.GetAllDogsAsync();
         return dogs;
     }
 }

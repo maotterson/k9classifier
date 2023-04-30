@@ -4,9 +4,9 @@ namespace k9classifier_webapi.Repositories;
 
 public interface IDogRepository
 {
-    Dog GetDogById(int id);
-    IEnumerable<Dog> GetAllDogs();
-    void AddDog(Dog dog);
-    void UpdateDog(Dog dog);
-    void DeleteDog(int id);
+    Task<Dog> GetDogByIdAsync(int id);
+    Task<IEnumerable<Dog>> GetAllDogsAsync();
+    Task AddDogAsync(Dog dog);
+    Task UpdateDogAsync(Dog dog);
+    Task DeleteDogAsync(int id);
 }

@@ -10,8 +10,8 @@ public class DogRepositoryTests
     public DogRepositoryTests()
     {
         _mockRepository = new Mock<IDogRepository>();
-        _mockRepository.Setup(repo => repo.GetDogById(1))
-                       .Returns(new Dog { Id = 1, Name = "Winnie", Breed = "Siberian Husky" });
+        _mockRepository.Setup(repo => repo.GetDogByIdAsync(1))
+                       .Returns(Task.FromResult(new Dog { Id = 1, Name = "Winnie", Breed = "Siberian Husky" }));
     }
 
     [Fact]
@@ -21,7 +21,7 @@ public class DogRepositoryTests
         var repository = _mockRepository.Object;
 
         // Act
-        var result = repository.GetDogById(1);
+        var result = await repository.GetDogByIdAsync(1);
 
         // Assert
         Assert.NotNull(result);
