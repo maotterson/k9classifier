@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32505.426
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "k9classifier-webapi", "k9classifier-webapi\k9classifier-webapi.csproj", "{5F44759E-05C9-4D45-B008-E71FD4417A81}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1E9E20B4-59EF-4ECF-9001-16BE55F69FDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "k9classifier-webapi-tests", "k9classifier-webapi-tests\k9classifier-webapi-tests.csproj", "{21026D77-72AA-4494-8EE7-F98400417653}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{5F44759E-05C9-4D45-B008-E71FD4417A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F44759E-05C9-4D45-B008-E71FD4417A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F44759E-05C9-4D45-B008-E71FD4417A81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21026D77-72AA-4494-8EE7-F98400417653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21026D77-72AA-4494-8EE7-F98400417653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21026D77-72AA-4494-8EE7-F98400417653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21026D77-72AA-4494-8EE7-F98400417653}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21026D77-72AA-4494-8EE7-F98400417653} = {1E9E20B4-59EF-4ECF-9001-16BE55F69FDF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F701A07-747D-4E71-B2E8-40AFA82298C7}
